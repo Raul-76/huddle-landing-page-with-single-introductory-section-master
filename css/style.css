@@ -17,10 +17,12 @@
 }
 
 body{
-    background-color: var(--violet);
-    padding: 1.5rem 2.5rem;
     background-image: url("/images/bg-mobile.svg");
     background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-color: var(--violet);
+    padding: 2rem 2.5rem;
     font-family: var(--font-primary);
 }
 
@@ -42,10 +44,24 @@ img{
     margin: 0 auto;
 }
 
-@media  screen and (min-width: 48rem){
+@media  screen and (min-width: 62rem){
     .col-6{
         grid-column: span 6;
     }
+
+    body{
+        background-image: url("/images/bg-desktop.svg");
+        min-height: 100vh;
+        background-size: 100% 100%;
+    }
+
+    .container{
+        column-gap: 3rem;
+    }
+}
+
+.hero-banner{
+    margin:0 auto;
 }
 
 .logo-huddle img{
@@ -80,11 +96,43 @@ img{
     font-weight: 400;
 }
 
-.social-media ul{
+.list-icons{
     display: flex;
     list-style-type: none;
-    gap: .5rem;
-    width: 100%;
+    gap: 1.5rem;
     justify-content: center;
+}
+
+.icon-social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    text-decoration: none;
+}
+
+@media  screen and (min-width: 48rem){
+    .logo-huddle img{
+        height: 3rem;
+    }
+
+    .text-description h2{
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 62rem){
+    .text-description{
+        text-align: left;
+    }
+
+    .list-icons{
+        justify-content: end;
+    }
 }
 
